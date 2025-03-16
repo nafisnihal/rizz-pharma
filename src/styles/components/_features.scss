@@ -1,0 +1,32 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.features {
+  width: 100%;
+  margin: 160px 0;
+  padding: 55px 0;
+  background-color: #31418c4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+
+  .features-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    .features-icon {
+      width: 40px;
+      height: 40px;
+      color: $secondary-color;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #ffffff;
+    }
+  }
+}

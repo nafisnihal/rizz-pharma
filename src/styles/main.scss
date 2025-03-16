@@ -3,7 +3,8 @@
 @use "global";
 @use "layout";
 @use "components";
+@use "components/loader";
 @use "components/header";
 @use "components/hero";
 @use "components/categories";
-@use "components/loader";
+@use "components/features";
