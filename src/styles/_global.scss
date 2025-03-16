@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../assets/fonts/NeueMontreal.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Impact";
+  src: url("../assets/fonts/Impact.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $background-color !important;
+  color: $primary-color;
+  background: url("../assets/full-bg.webp") no-repeat center top;
+  background-size: cover;
+}
+
+.colored-text {
+  background: linear-gradient(180deg, #c1842d, #ecc974);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

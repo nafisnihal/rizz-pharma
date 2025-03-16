@@ -1,0 +1,56 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero {
+  padding-top: 53px;
+  padding-bottom: 147px;
+
+  .hero-title {
+    max-width: 547px;
+    font-family: $font-secondary;
+    font-size: 5rem;
+    font-weight: 400;
+
+    @include respond(tablet) {
+      font-size: 4rem;
+    }
+
+    @include respond(mobile) {
+      font-size: 3rem;
+    }
+  }
+
+  .hero-button {
+    margin-top: 33px;
+    display: inline-block;
+    padding: 17px 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1c1c1c;
+    border-radius: 30px;
+    position: relative;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #ff3d77, #7f52ff);
+      z-index: -1;
+    }
+
+    &:hover {
+      &::before {
+        background: linear-gradient(90deg, #7f52ff, #ff3d77);
+      }
+    }
+  }
+}
