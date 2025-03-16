@@ -1,0 +1,58 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.services-container {
+  width: 100%;
+  margin-bottom: 160px;
+  height: 100vh;
+  background-image: url("../assets/services-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .services {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 90px;
+
+    h1 {
+      font-family: $font-secondary;
+      font-size: 3.6rem;
+      font-weight: 400;
+    }
+
+    .services-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      p {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .icon {
+          rotate: 45deg;
+        }
+      }
+    }
+
+    @include respond(tablet) {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @include respond(mobile) {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

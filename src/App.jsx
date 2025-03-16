@@ -7,6 +7,7 @@ const Hero = lazy(() => import("./components/Hero"));
 const Categories = lazy(() => import("./components/Categories"));
 const Features = lazy(() => import("./components/Features"));
 const Products = lazy(() => import("./components/Products"));
+const Services = lazy(() => import("./components/Services"));
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Categories />
       <Features />
       <Products />
+      <Services />
     </Suspense>
   );
 }
