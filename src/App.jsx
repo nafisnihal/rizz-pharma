@@ -8,6 +8,7 @@ const Categories = lazy(() => import("./components/Categories"));
 const Features = lazy(() => import("./components/Features"));
 const Products = lazy(() => import("./components/Products"));
 const Services = lazy(() => import("./components/Services"));
+const Testimonials = lazy(() => import("./components/Testimonials"));
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Features />
       <Products />
       <Services />
+      <Testimonials />
     </Suspense>
   );
 }

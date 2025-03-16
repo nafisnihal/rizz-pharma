@@ -19,11 +19,7 @@ const Products = () => {
 
   const tabs = [
     "All",
-    "Skin Care",
-    "Hair Care",
-    "Supplements",
-    "Personal Care",
-    "Oral Care",
+    "Best Selling Products",
     ...categories.map((category) => category.name),
   ];
 
