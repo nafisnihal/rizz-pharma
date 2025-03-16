@@ -6,7 +6,6 @@ import Loader from "./Loader";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
-  console.log("🚀 ~ Categories ~ categories:", categories);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

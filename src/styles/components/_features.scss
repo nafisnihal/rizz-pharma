@@ -12,6 +12,11 @@
   flex-wrap: wrap;
   gap: 80px;
 
+  @include respond(mobile) {
+    flex-direction: column;
+    gap: 40px;
+  }
+
   .features-item {
     display: flex;
     justify-content: center;
