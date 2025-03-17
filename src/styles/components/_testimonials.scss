@@ -110,4 +110,8 @@
       }
     }
   }
+
+  @include respond(mobile) {
+    padding: 0 10px;
+  }
 }

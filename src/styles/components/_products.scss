@@ -87,6 +87,7 @@
       border-radius: 12px;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
 
       .product-info {
         padding: 20px 15px 20px 40px;
@@ -98,6 +99,7 @@
           width: 70px;
           height: 157px;
           object-fit: contain;
+          transition: all 0.3s;
         }
 
         h3 {
@@ -138,6 +140,14 @@
 
           &:hover {
             background: linear-gradient(180deg, #ecc974, #c1842d);
+          }
+        }
+      }
+
+      &:hover {
+        .product-info {
+          img {
+            transform: scale(1.1);
           }
         }
       }

@@ -73,10 +73,23 @@
     }
   }
 
-  @include respond(mobile) {
-    padding: 20px;
-    h1 {
-      font-size: 2rem;
+  @include respond(tablet) {
+    // flex-direction: column;
+    padding-top: 20px;
+    align-items: start;
+
+    .logo {
+      width: 80px;
+      height: 100px;
+    }
+
+    .header-right {
+      align-items: center;
+      gap: 20px;
+
+      .header-nav {
+        display: none;
+      }
     }
   }
 }
