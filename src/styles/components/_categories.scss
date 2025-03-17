@@ -57,7 +57,7 @@
   }
 
   .grid-item {
-    width: 370px;
+    min-width: 370px;
     border-radius: 16px;
     display: flex;
     align-items: flex-end;
@@ -76,6 +76,14 @@
 
     &:hover {
       transform: scale(1.05);
+    }
+
+    @include respond(mobile) {
+      width: 100%;
+
+      &:hover {
+        transform: none;
+      }
     }
   }
 

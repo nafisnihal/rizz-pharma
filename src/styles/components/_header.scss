@@ -76,6 +76,7 @@
   @include respond(tablet) {
     // flex-direction: column;
     padding-top: 20px;
+    justify-content: space-between;
     align-items: start;
 
     .logo {
