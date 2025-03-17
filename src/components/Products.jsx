@@ -74,7 +74,7 @@ const Products = () => {
   };
 
   return (
-    <div className="container products">
+    <div className="container products" id="products">
       <h1 className="section-title">
         Solutions for Your <span className="colored-text">Unique</span> Health
         Goals

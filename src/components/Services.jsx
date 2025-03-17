@@ -4,7 +4,7 @@ import "../styles/main.scss";
 
 const Services = () => {
   return (
-    <div className="services-container">
+    <div className="services-container" id="services">
       <div className="container services">
         <div>
           <h1>100% Online,</h1>

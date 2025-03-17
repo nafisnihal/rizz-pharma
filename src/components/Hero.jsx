@@ -3,7 +3,7 @@ import "../styles/main.scss";
 
 const Hero = () => {
   return (
-    <div className="container hero">
+    <div className="container hero" id="hero">
       <h1 className="hero-title">
         Prescription treatments for your <br />{" "}
         <span className="colored-text">health goals</span>

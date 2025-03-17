@@ -19,7 +19,7 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className="container categories">
+    <div className="container categories" id="categories">
       <div className="searchbox">
         <RiSearchLine size={24} />
         <input type="text" placeholder="Search by product/treatment" />

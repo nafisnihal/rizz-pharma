@@ -8,23 +8,25 @@ import "../styles/main.scss";
 const Header = () => {
   return (
     <div className="container header">
-      <img src={logo} alt="" className="logo" />
+      <a href="#">
+        <img src={logo} alt="" className="logo" />
+      </a>
       <div className="header-right">
         <div className="header-nav">
           <nav className="navs">
-            <a href="" className="nav">
+            <a href="#hero" className="nav">
               Home
             </a>
-            <a href="" className="nav">
+            <a href="#categories" className="nav">
               Category
             </a>
-            <a href="" className="nav">
+            <a href="#products" className="nav">
               Top Products
             </a>
-            <a href="" className="nav">
+            <a href="#footer" className="nav">
               Contact Us
             </a>
-            <a href="" className="nav">
+            <a href="#services" className="nav">
               FAQs
             </a>
           </nav>
