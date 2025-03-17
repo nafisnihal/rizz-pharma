@@ -59,14 +59,7 @@
   .grid-item {
     min-width: 370px;
     border-radius: 16px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 16px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
+    overflow: hidden;
     background-size: cover;
     background-position: center;
     border-radius: 24px;
@@ -78,7 +71,7 @@
       transform: scale(1.05);
     }
 
-    @include respond(mobile) {
+    @include respond(tablet) {
       width: 100%;
 
       &:hover {
