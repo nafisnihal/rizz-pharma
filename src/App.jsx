@@ -9,6 +9,7 @@ const Features = lazy(() => import("./components/Features"));
 const Products = lazy(() => import("./components/Products"));
 const Services = lazy(() => import("./components/Services"));
 const Testimonials = lazy(() => import("./components/Testimonials"));
+const Footer = lazy(() => import("./components/Footer"));
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Products />
       <Services />
       <Testimonials />
+      <Footer />
     </Suspense>
   );
 }
