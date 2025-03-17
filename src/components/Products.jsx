@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { GoArrowRight } from "react-icons/go";
 import { MdAddShoppingCart } from "react-icons/md";
 import "../styles/main.scss";
@@ -8,6 +9,8 @@ const Products = () => {
   const [selectedTab, setSelectedTab] = useState("All");
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
   const tabsRef = useRef(null);
 
   useEffect(() => {
@@ -37,6 +40,32 @@ const Products = () => {
       ? products
       : products.filter((product) => product.category.includes(selectedTab));
 
+  // Pagination logic
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const paginatedProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
+  // Handle page change
+  const goToPreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+    }
+  };
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prev) => prev + 1);
+    }
+  };
+
+  // Reset page when category changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedTab]);
+
   // Function to scroll tabs to the right
   const scrollRight = () => {
     if (tabsRef.current) {
@@ -50,6 +79,7 @@ const Products = () => {
         Solutions for Your <span className="colored-text">Unique</span> Health
         Goals
       </h1>
+
       <div className="tabs-wrapper">
         <div className="tabs" ref={tabsRef}>
           {tabs.map((tab, index) => (
@@ -67,10 +97,9 @@ const Products = () => {
         </button>
       </div>
 
-      {/* 🔹 Render Filtered Products */}
       <div className="products-list">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => (
+        {paginatedProducts.length > 0 ? (
+          paginatedProducts.map((product) => (
             <div key={product.id} className="product-card">
               <div className="product-info">
                 <img src={product.image} alt={product.name} />
@@ -87,7 +116,6 @@ const Products = () => {
                   {product.condition}
                 </p>
               )}
-
               <div className="card-bottom">
                 <p className="product-charges">
                   {product.charges.map((charge, index) => (
@@ -107,6 +135,17 @@ const Products = () => {
           <p className="no-products">No products found for this category.</p>
         )}
       </div>
+
+      {totalPages > 1 && (
+        <div className="pagination">
+          <button onClick={goToPreviousPage} disabled={currentPage === 1}>
+            <BsArrowLeft size={24} />
+          </button>
+          <button onClick={goToNextPage} disabled={currentPage === totalPages}>
+            <BsArrowRight size={24} />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
