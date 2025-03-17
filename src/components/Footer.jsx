@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="footer-section subscribe-box">
             <h3>Let's Stay In Touch</h3>
             <p>Keep up to date with our latest news & special offers.</p>
-            <div class="subscribe-input">
+            <div className="subscribe-input">
               <input type="email" placeholder="enter your email" />
               <TbLocation size={24} />
             </div>

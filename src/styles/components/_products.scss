@@ -73,4 +73,92 @@
     transition: 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+
+  .products-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .product-card {
+      width: 270px;
+      height: 262px;
+      background-color: #31418c4d;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+
+      .product-info {
+        padding: 20px 15px 20px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        img {
+          width: 70px;
+          height: 157px;
+          object-fit: contain;
+        }
+
+        h3 {
+          font-size: 1.125rem;
+          font-weight: 500;
+        }
+      }
+
+      .card-bottom {
+        height: 65px;
+        display: flex;
+        background-color: #1f1f1f4d;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        .product-charges {
+          font-size: 12px;
+          padding: 0 16px;
+        }
+
+        .cart-btn {
+          width: 87px;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: linear-gradient(180deg, #c1842d, #ecc974);
+          color: $background-color;
+          font-size: 12px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.3s;
+          border: none;
+
+          &:hover {
+            background: linear-gradient(180deg, #ecc974, #c1842d);
+          }
+        }
+      }
+    }
+
+    .product-condition {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px 10px;
+      background-color: $secondary-color;
+      border-bottom-left-radius: 12px;
+      font-size: 13px;
+    }
+
+    .research-gradient {
+      background: linear-gradient(90deg, #d78c6c, #a75356);
+    }
+
+    .recurring-gradient {
+      background: linear-gradient(180deg, #6c221d, #954139);
+    }
+  }
 }
