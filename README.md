@@ -1,12 +1,63 @@
-# React + Vite
+# UFC X Rizz Pharma
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
+This project is a **landing page** designed for **Rizz Pharma** in collaboration with **UFC**. The page aims to showcase the partnership, highlight key pharmaceutical products, and provide an engaging user experience with a sleek and modern UI. 
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Stunning **reference-based design** for branding consistency
+- **Responsive** and mobile-friendly layout
+- **Engaging UI/UX** with animations and smooth scrolling
+- **Product showcase** section highlighting Rizz Pharma’s key offerings
+- **UFC Collaboration highlights** with dynamic content
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- **Frontend:** React, SCSS
+- **Tools:** Vite, Git, JSON API (for dynamic content)
 
-## Expanding the ESLint configuration
+## 🌐 Live Preview
+Check out the live preview here: **[Live Demo](https://rizz-pharma-nn.vercel.app/)**
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Folder Structure
+```
+📦 rizz-pharma
+├──📂 public
+├──📂 src
+    ├──📂 assets
+    ├──📂 components
+    ├──📂 styles
+    └──📂 utils
+    ├──📜 App.css
+    ├──📜 App.jsx
+    ├──📜 index.css
+    ├──📜 main.jsx
+├──📜 .gitignore
+├──📜 eslint.config.js
+├──📜 index.html
+├──📜 package-lock.json
+├──📜 package.json
+├──📜 README.md
+└──📜 vite.config.js
+```
+
+## 📦 Installation & Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/nafisnihal/rizz-pharma.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd rizz-pharma
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+## 📡 API Integration
+- Data is fetched from [Mock API](https://mockapi.io/)
+
+ 
